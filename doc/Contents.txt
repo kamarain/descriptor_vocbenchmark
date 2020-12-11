@@ -1,0 +1,21 @@
+[report1]
+This does not exist here, but we consider our ICPR 2012
+publication as report1 (note that the first publication is
+actually Ville Kangas Master thesis available at the
+MVPR Web site (Lappeenranta University of Technology):
+
+Lankinen, J.; Kangas, V.; Kamarainen, J.-K..
+A comparison of local feature detectors and descriptors for visual object categorization by intra-class repeatability and matching,
+In 21th Int. Conf. on Pattern Recognition (ICPR2012), Tsukuba Science City, Japan, 2012.
+
+[report2]
+First time submitted to Pattern Recognition Letters using Anders' new
+evaluation measure for descriptors (ellipse overlap as in the original
+Mikolajczyk's paper).
+
+All experiments re-run using new code by Joni (cleaned all stupid
+sub-functions and made easier to understand and debug). Added also
+new descriptors based on experiences from other projects.
+
+Planning to submit to IEEE-TIP or IVC
+

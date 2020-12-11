@@ -1,0 +1,13 @@
+This work extends our preliminary work in the attached ICPR 2012 paper
+by revising the experiments with more accurate measures that directly
+correspond to the original works by Mikolajczyk et al. (affecting 
+especially to the descriptor evaluation), introducing the coverage-N
+performance measure and, in particular, providing two important
+findings: with object class instances the number of matching regions
+is very low, only a few as compared to hundreds in the original work,
+and significant improvement can be achieved by counting more than one,
+even as few as 5, best matches. The last two findings did not appear
+in the ICPR work at all and thus may have given misleadingly positive
+picture of the descriptors in object class level matching.
+
+

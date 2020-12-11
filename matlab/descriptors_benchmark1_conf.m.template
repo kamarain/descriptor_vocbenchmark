@@ -1,0 +1,134 @@
+%DESCRIPTORS_BENCHMARK1_CONF Benchmark configuration file template
+%
+% DO NOT EDIT but make you own copy:
+%   ~>cp descriptors_benchmark1_conf.m.template descriptors_benchmark1_conf.m
+% and then edit pahts etc. correctly
+%
+% See also DESCRIPTORS_BENCHMARK1.M .
+function [ conf ] = descriptors_benchmark1_conf();
+
+conf.conf_sets = {'debug','report2','report2-rcaltech101'};
+conf.conf_setno = 3;
+
+switch (conf.conf_sets{conf.conf_setno})
+ case 'debug' % For debugging the code (i.e. minimal)
+  fprintf(['Using the configuration set: ''' ...
+          conf.conf_sets{conf.conf_setno} '''\n']);
+
+  % Set paths accordingly
+  conf.tempSaveDir = './TEMPSAVE_descriptors_benchmark1_debug';
+  conf.imageRoot = '/home/kamarain/Data/';
+  conf.landmarksRoot = '/home/kamarain/Data/';
+  conf.masksRoot = '/home/kamarain/Data/';
+  conf.filelistRoot = 'filelists/icpr2012';
+
+  % Transformation type
+  conf.hType = 'affinity';
+
+  % Pairs (A,B) of images, object area masks ([] if does not exist)
+  % and landmarks  
+  conf.imgsA = 'img_A.txt';
+  conf.masksA = 'annotation_A.txt';
+  conf.landmarksA = 'dot_A.txt';
+  conf.imgsB = 'img_B.txt';
+  conf.masksB = 'annotation_B.txt';
+  conf.landmarksB = 'dot_B.txt';
+  conf.maskType = 'caltech101';
+
+  conf.detdesc = ... % see MVPR_FEATURE_EXTRACT_NEW
+      {'fs_hesaff+fs_sift'}; 
+  conf.detdescLabels = {};
+  conf.descriptorOverlap = [50]; % {40,50} def: 40
+  conf.bestMatchMax = 3;
+  conf.descMatchCriterion = 1; % 1:Mikolajcyzk [1], 2: Our ICPR [1]
+  
+  conf.enforceTransformations = false
+  conf.enforceFeatures = false;
+  conf.enforceMatching = false;
+  conf.validateFeatForce = 1;
+  conf.debugLevel = 1;
+  conf.saveAlsoFig = false; % AGB: PNG only if false
+
+ case 'report2' % Results for doc/report1/
+  fprintf(['Using the configuration set: ''' ...
+          conf.conf_sets{conf.conf_setno} '''\n']);
+
+  % Set paths accordingly
+  conf.tempSaveDir = './TEMPSAVE_descriptors_benchmark1_report2';
+  conf.imageRoot = '/home/kamarain/Data/';
+  conf.landmarksRoot = '/home/kamarain/Data/';
+  conf.masksRoot = '/home/kamarain/Data/';
+  conf.filelistRoot = 'filelists/icpr2012';
+    
+  % Transformation type
+  conf.hType = 'affinity';
+
+  % Pairs (A,B) of images, object area masks ([] if does not exist)
+  % and landmarks  
+  conf.imgsA = 'img_A.txt';
+  conf.masksA = 'annotation_A.txt'; % [] if not exist
+  conf.landmarksA = 'dot_A.txt';
+  conf.imgsB = 'img_B.txt';
+  conf.masksB = 'annotation_B.txt'; % [] if not exist
+  conf.landmarksB = 'dot_B.txt';
+  conf.maskType = 'caltech101';
+
+  conf.detdesc = ... % see MVPR_FEATURE_EXTRACT_NEW
+      {...
+  %          'vl_sift+vl_sift',...
+  %        'fs_hesaff+fs_sift',...
+          'vl_dense+vl_sift',...
+  %        'cv_orb+cv_brief',... 
+  %        'cv_orb+cv_sift',...
+          'cv_dense+cv_sift',...
+  %          'cv_dense+cv_brief',...
+      }; 
+  conf.detdescLabels = {};
+  conf.descriptorOverlap = [50]; % {40,50} def: 50 for descriptors
+  conf.bestMatchMax = 1;
+  conf.descMatchCriterion = 1; % 1:Mikolajcyzk [1], 2: Our ICPR [1]
+  
+  conf.enforceTransformations = false
+  conf.enforceFeatures = false;
+  conf.enforceMatching = false;
+  conf.validateFeatForce = 1;
+  conf.debugLevel = 1;
+  conf.saveAlsoFig = false; % AGB: PNG only if false
+
+ case 'report2-rcaltech101' % Results for doc/report1/
+  fprintf(['Using the configuration set: ''' ...
+          conf.conf_sets{conf.conf_setno} '''\n']);
+
+  % Set paths and file list files
+  conf.tempSaveDir = './TEMPSAVE_descriptors_benchmark1_report2_rcaltech101';
+  conf.imageRoot = '/home/kamarain/Data/';
+  conf.landmarksRoot = '/home/kamarain/Data/';
+  conf.masksRoot = '/home/kamarain/Data/';
+  conf.filelistRoot = 'filelists/rcaltech101';
+  conf.imgsA = 'img_A.txt';
+  conf.masksA = 'annotation_A.txt'; % [] if not exist
+  conf.landmarksA = 'dot_A.txt';
+  conf.imgsB = 'img_B.txt';
+  conf.masksB = 'annotation_B.txt'; % [] if not exist
+  conf.landmarksB = 'dot_B.txt';
+  conf.maskType = 'r-caltech101';
+
+  conf.hType = 'affinity'; % GT transformation type
+  conf.detdesc = ... % see MVPR_FEATURE_EXTRACT_NEW
+      {'fs_hesaff+fs_sift',...
+       'vl_dense+vl_sift',...
+       'cv_dense+cv_sift'}; 
+  conf.detdescLabels = {};
+  conf.detectorOverlap = [50]; % {40,50} def: 40
+  conf.bestMatchMax = 1;
+  conf.descMatchCriterion = 1; % 1:Mikolajcyzk [1], 2: Our ICPR [1]
+
+  conf.enforceTransformations = false
+  conf.enforceFeatures = false;
+  conf.validateFeatForce = 1;
+  conf.debugLevel = 1;
+  conf.saveAlsoFig = false; % AGB: PNG only if false
+
+ otherwise
+  error('Non-existing configuration set selected!');
+end;

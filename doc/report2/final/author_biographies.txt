@@ -1,0 +1,15 @@
+Antti Hietanen
+Antti hietanen received his B.Sc. degree in Computer Science from the Tampere University of Technology, Finland, in 2015. He is currently pursuing the M.Sc. degree as a member of the Computer Vision Group at the Department of Signal Processing. His current studies focus on Signal Processing and Pervasive Systems.
+
+Jukka Lankinen
+Jukka Lankinen is with the Department of Signal Processing, Tampere University of Technology. He received his M.Sc. in 2009 and his Ph.D. in 2014 from Lappeenranta University of Technology. His research interests are local part detectors and descriptors and video processing.
+
+Anders Glent Buch
+Anders Glent Buch is with the M\ae{}rsk McKinney M\o{}ller Institute, University of Southern Denmark, from where he received his M.Sc. in 2010 and his Ph.D. in 2015. He is a member of the Cognitive and Applied Robotics (CARO) group, where he focuses on computer vision and robotic applications. He is currently working on 3D reconstructions, pose estimation and object recognition.
+
+
+Joni-Kristian K{\"a}m{\"a}r{\"a}inen
+Joni-Kristian K{\"a}m{\"a}r{\"a}inen is an associate professor of signal processing at the Department of Signal Processing, Tampere University of Technology, Finland. He holds MSc and PhD degrees from Lappeenranta University of Technology in 1999 and 2003, respectively. He leads the Computer Vision Group and his research focuses on 2D and 3D scene analysis, object detection and recognition, signal processing and machine intelligence.
+
+Norbert Kr\"u{}ger
+Norbert Kr\"u{}ger is a professor at the M\ae{}rsk McKinney M\o{}ller Institute, University of Southern Denmark. He holds a M.Sc. degree from the Ruhr-Universit\"at Bochum, Germany and his Ph.D. degree from the University of Bielefeld. He co--leads the Cognitive and Applied Robotics (CARO) group.  His research focuses on computer vision and cognitive robotic  systems. He has also been working in the areas of computational neuroscience and machine learning.

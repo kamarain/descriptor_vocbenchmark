@@ -1,0 +1,48 @@
+\documentclass{letter}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{graphicx}
+
+\newcommand\newnotecommand[3]{%
+  \newcommand#1[1]{{\color{#3}{\color{#3}#2:} ##1}}}
+\newnotecommand\authorreply{Author Reply}{red}
+
+
+\signature{The authors of NEUCOM-D-14-02709R1}
+\address{Tampere University of Technology\\University of Southern Denmark}
+\begin{document}
+
+\begin{letter}{Special Issue Editor and Anonymous Reviewers\\
+Submission NEUCOM-D-14-02709R1\\
+Neurocomputing}
+
+\opening{Dear Sir or Madam:}
+
+We thank editor and anonymous reviewers for their valuable comments.
+We have revised the manuscript and in
+the following we briefly reply to the reviewers' comments.
+
+{\em Reviewer \#1:}
+The revised manuscript is now much improved with good considerations and experimental validations for existing feature detectors and descriptors in the domain of object class matching. The reviewer is reasonably satisfied with this round of revision.
+
+\authorreply{Thank you.}
+
+{\em Reviewer \#2:}
+
+The authors well addressed the comments of reviewers. I have still a comment about Figure 8.
+
+Although the authors have make revision to Figure 8, it is still difficult for the readers to read it. It would be better to use Table and number instead of Figure 8. As well, the authors mentioned that they emphasize the influence nearest neighbors to all methods, it can provide some interesting finding. Finally, please give the legend for all methods.
+
+\authorreply{Thank you. Figure 8 was further improved, we agree that it contains a lot of information, but readers may find it interesting to see also class specific performance. As requested, the legends were added and the average results were collected to Table 1 which is in the revised version of the manuscript.}
+
+\closing{Yours Faithfully,}
+
+\ps
+
+%P.S. You can find the full text of GFDL license at
+%\url{http://www.gnu.org/copyleft/fdl.html}.
+
+%\encl{Turnitin overall score page}
+
+\end{letter}
+\end{document}

@@ -1,0 +1,9 @@
+Mikolajczyk's detector evaluation is extended to visual object class repeatibility
+
+Mikolajczyk's descriptor evaluation is extended to the case of object classes
+
+A new performance measure, match coverage, is proposed for the descriptor evaluation
+
+Instead of a single best match, the effect of multiple best matches is investigated
+
+An important finding of descriptor matching collapse with object classes is revealed
